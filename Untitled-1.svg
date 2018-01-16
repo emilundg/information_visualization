@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 768" style="enable-background:new 0 0 1024 768;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.75;fill:#29ABE2;}
+	.st1{fill:#29ABE2;}
+	.st2{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st3{fill:none;}
+	.st4{font-family:'MyriadPro-Regular';}
+	.st5{font-size:36px;}
+</style>
+<polygon class="st0" points="107,175 228,241 373,289 457,390 535,403 631,456 726,550 849,583 882,583 901.5,634.5 103,634 
+	103,175 "/>
+<line class="st1" x1="103" y1="634.5" x2="924.5" y2="634.5"/>
+<g>
+	<g>
+		<line class="st2" x1="102.5" y1="142.6" x2="102.5" y2="636"/>
+		<g>
+			<polygon points="102.5,128.5 94.4,148.4 102.5,143.7 110.6,148.4 			"/>
+		</g>
+	</g>
+</g>
+<line class="st3" x1="103" y1="634" x2="103" y2="635"/>
+<g>
+	<g>
+		<line class="st2" x1="102" y1="635" x2="922.9" y2="635"/>
+		<g>
+			<polygon points="937,635 917.1,643.1 921.8,635 917.1,626.9 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 102 721)" class="st4 st5">Henrik Tran (CID: tranh) - Emil Lundgren (CID: emilundg)</text>
+<text transform="matrix(1 0 0 1 942 645)" class="st4 st5">Time</text>
+<text transform="matrix(1 0 0 1 53 114)" class="st4 st5">Energy</text>
+<text transform="matrix(1 0 0 1 307 52)" class="st4 st5">Effect of one cup of coffee</text>
+</svg>
