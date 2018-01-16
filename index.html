@@ -28,22 +28,25 @@
       <button onclick="alterExternalSVG()">OR.. Press me (if you dare)</button>
     </div>
     <div class="box">
-      <h2>Right image</h2>
+      <h2>This is a smileyface</h2>
       <svg>
       <circle cx="50" cy="50" r="40" stroke="black" stroke-width="5" fill="white" />
       <circle cx="150" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
       <rect width="10" height="10" x="40" y="40" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
       <rect width="10" height="10" x="150" y="40" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
-      <rect width="100" height="10" x="50" y="150" style="fill:rgb(255,0,0)" />
+      <rect id="mout" width="100" height="10" x="50" y="150" style="fill:rgb(255,0,0)" />
     </svg>
     </div>
     <div class="box footer">
+      <img height="300px" id="lolskiboi" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFk%0D%0Ab2JlIElsbHVzdHJhdG9yIDIyLjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246%0D%0AIDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5z%0D%0APSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMu%0D%0Ab3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMDI0IDc2OCIg%0D%0Ac3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTAyNCA3Njg7IiB4bWw6c3BhY2U9InBy%0D%0AZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7b3BhY2l0eTowLjc1O2ZpbGw6%0D%0AIzI5QUJFMjt9Cgkuc3Qxe2ZpbGw6IzI5QUJFMjt9Cgkuc3Qye2ZpbGw6bm9uZTtzdHJva2U6IzAw%0D%0AMDAwMDtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9Cgkuc3Qze2ZpbGw6bm9u%0D%0AZTt9Cgkuc3Q0e2ZvbnQtZmFtaWx5OidNeXJpYWRQcm8tUmVndWxhcic7fQoJLnN0NXtmb250LXNp%0D%0AemU6MzZweDt9Cjwvc3R5bGU+Cjxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTA3LDE3NSAy%0D%0AMjgsMjQxIDM3MywyODkgNDU3LDM5MCA1MzUsNDAzIDYzMSw0NTYgNzI2LDU1MCA4NDksNTgzIDg4%0D%0AMiw1ODMgOTAxLjUsNjM0LjUgMTAzLDYzNCAKCTEwMywxNzUgIi8+CjxsaW5lIGNsYXNzPSJzdDEi%0D%0AIHgxPSIxMDMiIHkxPSI2MzQuNSIgeDI9IjkyNC41IiB5Mj0iNjM0LjUiLz4KPGc+Cgk8Zz4KCQk8%0D%0AbGluZSBjbGFzcz0ic3QyIiB4MT0iMTAyLjUiIHkxPSIxNDIuNiIgeDI9IjEwMi41IiB5Mj0iNjM2%0D%0AIi8+CgkJPGc+CgkJCTxwb2x5Z29uIHBvaW50cz0iMTAyLjUsMTI4LjUgOTQuNCwxNDguNCAxMDIu%0D%0ANSwxNDMuNyAxMTAuNiwxNDguNCAJCQkiLz4KCQk8L2c+Cgk8L2c+CjwvZz4KPGxpbmUgY2xhc3M9%0D%0AInN0MyIgeDE9IjEwMyIgeTE9IjYzNCIgeDI9IjEwMyIgeTI9IjYzNSIvPgo8Zz4KCTxnPgoJCTxs%0D%0AaW5lIGNsYXNzPSJzdDIiIHgxPSIxMDIiIHkxPSI2MzUiIHgyPSI5MjIuOSIgeTI9IjYzNSIvPgoJ%0D%0ACTxnPgoJCQk8cG9seWdvbiBwb2ludHM9IjkzNyw2MzUgOTE3LjEsNjQzLjEgOTIxLjgsNjM1IDkx%0D%0ANy4xLDYyNi45IAkJCSIvPgoJCTwvZz4KCTwvZz4KPC9nPgo8dGV4dCB0cmFuc2Zvcm09Im1hdHJp%0D%0AeCgxIDAgMCAxIDEwMiA3MjEpIiBjbGFzcz0ic3Q0IHN0NSI+SGVucmlrIFRyYW4gKENJRDogdHJh%0D%0AbmgpIC0gRW1pbCBMdW5kZ3JlbiAoQ0lEOiBlbWlsdW5kZyk8L3RleHQ+Cjx0ZXh0IHRyYW5zZm9y%0D%0AbT0ibWF0cml4KDEgMCAwIDEgOTQyIDY0NSkiIGNsYXNzPSJzdDQgc3Q1Ij5UaW1lPC90ZXh0Pgo8%0D%0AdGV4dCB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAxIDUzIDExNCkiIGNsYXNzPSJzdDQgc3Q1Ij5F%0D%0AbmVyZ3k8L3RleHQ+Cjx0ZXh0IHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIDEgMzA3IDUyKSIgY2xh%0D%0Ac3M9InN0NCBzdDUiPkVmZmVjdCBvZiBvbmUgY3VwIG9mIGNvZmZlZTwvdGV4dD4KPC9zdmc+Cg==">
+      <div id="external_svg"></div>
       <h3>Information visualization (CIU187) 2018 - Emil Lundgren (CID: emilundg) - Henrik Tran (CID: tranh)</h3>
     </div>
 
   </div>
 
-
+<script src="kanskebehovsJS.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.min.js"></script>
 </body>
 
 </html>

@@ -1,14 +1,38 @@
 // You should understand the basics of what's happening in this first function (The CSS part, not the d3 part)
+var count = 0;
 function changeColor() {
-  d3.select(".box").style("background-color", "pink");
+    if (count % 2 == 0) {
+      d3.select(".box").style("background-color", "green");
+    }
+    else {
+      d3.select(".box").style("background-color", "red");
+    }
+    count++;
 }
 
 // The stuff below is **optional** to dig into
 
+var i = 0;
+var j = 0;
+var b = 0;
 function alterExternalSVG() {
-  d3.selectAll("#external_svg svg .StarMarker path").attr("stroke-width","1");
-  d3.select("#external_svg svg text").text("Loaded via javascript/d3");
-
+  if (i >= 200) {
+    window.setInterval(function(){
+      /// call your function here
+      document.body.style.backgroundColor = 'rgb(' + i + ',' + j + ',' + b + ')';
+      i -= 10;
+      j -= 10;
+      b -= 10;
+    }, 50);
+  } else {
+    window.setInterval(function(){
+    /// call your function here
+    document.body.style.backgroundColor = 'rgb(' + i + ',' + j + ',' + b + ')';
+    i += 10;
+    j += 10;
+    b += 10;
+  }, 50);
+  }
 }
 
 function loadSVG( url, targetid ) {
