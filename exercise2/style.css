@@ -1,0 +1,54 @@
+body {
+    margin: 40px;
+    background-color: rgb(19, 35, 47);
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+#poster {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr [last];
+}
+
+.box {
+    background-color: rgb(166, 196, 255);
+    border-radius: 5px;
+    padding: 10px;
+    BOX-SHADOW: 4PX 4PX 20PX rgb(24, 24, 24);
+}
+
+.header {
+    text-align: center;
+    grid-column: 1/ last;
+}
+
+.footer {
+    text-align: center;
+    grid-column: 1/ last;
+}
+
+svg {
+    width: 100%;
+    border: dashed 1px;
+}
+
+.dimple-line {
+    stroke: red !important;
+}
+
+#BUTTONZ:HOVER {
+  TRANSFORM: SCALE(1.1);
+}
+
+#BUTTONZ {
+  font-size: 15px;
+  color: rgba(19, 9, 26, 1);
+  BOX-SHADOW: 4PX 4PX 20PX rgb(24, 24, 24);
+  BORDER: NONE;
+  BORDER-RADIUS: 10PX;
+  HEIGHT: 50PX;
+  PADDING: 10PX;
+  BACKGROUND-COLOR: rgba(111, 67, 145, 1);
+  TRANSITION: ALL .2S EASE-IN-OUT;
+}

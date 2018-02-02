@@ -1,0 +1,36 @@
+<html>
+<head>
+   <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+  <div id="poster">
+
+    <div class="box header">
+        <h1>Workshop 2, Infovis 2018</h1>
+    </div>
+    <div class="box">
+        <h2>D3.js plot</h2>
+        <div id="d3Container"></div>
+        <button id="buttonz" onclick="d3RandomZoom()">Random Zoom</button>
+        <button id="buttonz" onclick="d3ResetZoom()">Reset Zoom</button>
+        <button id="buttonz" onclick="d3RandomizeData()">Randomize Data</button>
+    </div>
+    <div class="box"><h2>Dimple.js plot</h2>
+        <div id="dimpleContainer"></div>
+    </div>
+    <div class="box footer">
+        <h3>Create additional Dimple.js plot(s)
+        <div id="dimpleContainer2"></div>
+    </div>
+    <div class="box footer">
+        <h3>Information visualization (CIU187) 2018 - Emil Lundgren (CID: emilundg) & Henrik Tran (CID: tranh)</h3>
+    </div>
+</div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.min.js"></script>
+<script src="https://infovis.sjolie.se/js/dimple.v2.3.0.js"></script>
+<script src="script.js"></script>
+
+</html>
