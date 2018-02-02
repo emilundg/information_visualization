@@ -142,7 +142,7 @@ function drawDimplePlot(data) {
   dimpleChartz.addMeasureAxis("p", "Damage index");
   var innerRing = dimpleChartz.addSeries("Flight", dimple.plot.pie);
   // Negatives are calculated from outside edge, positives from center
-  innerRing.outerRadius = "-26px";
+  innerRing.outerRadius = "0px";
   innerRing.innerRadius = "-50px";
   dimpleChartz.addLegend(300, 20, 90, 300, "right");
   dimpleChartz.draw();
@@ -159,7 +159,7 @@ function resetFilter(){
    dimpleChartz.draw();
 }
 
-var damaged_csv = "https://dl.dropbox.com/s/7koek9msjpybdgq/infovisdata.csv?dl=0";
+var damaged_csv = "https://dl.dropbox.com/s/r7efnr66iwvfqlu/olympicsshiet1.csv?dl=0";
 
 d3.csv(damaged_csv, function (data) {
     data.forEach(function (d) {
