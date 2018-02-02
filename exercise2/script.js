@@ -1,18 +1,20 @@
 // Global variables
 // These are used for D3 graphs axises
 loadedData = false;
+areaChartData = null;
 
 var dimpleChart = false;
-var otherDimple;
+var otherDimple, totalAxis;
 
 function drawDimplePlotZWEI(data) {
   var svg = dimple.newSvg("#d3Container", 590, 400);
        data = dimple.filterData(data, "noc", ["USA", "URS", "GER", "GBR", "FRA", "ITA", "SWE", "HUN", "AUS", "GDR"])
-       var otherDimple = new dimple.chart(svg, data);
+       otherDimple = new dimple.chart(svg, data);
        otherDimple.setBounds(60, 30, 505, 305);
-       var x = otherDimple.addCategoryAxis("x", "edition");
-       x.addOrderRule("Date");
-       otherDimple.addMeasureAxis("y", "total");
+       var yearAxis = otherDimple.addCategoryAxis("x", "edition");
+       yearAxis.addOrderRule("Date");
+       totalAxis = otherDimple.addMeasureAxis("y", "total");
+       totalAxis.tickFormat = "";
        var lol = otherDimple.addSeries("noc", dimple.plot.area);
        var legend = otherDimple.addLegend(60, 10, 500, 20, "right");
        lol.lineWeight = 0;
@@ -30,10 +32,12 @@ function drawDimplePlotZWEI(data) {
        otherDimple.draw();
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3555b82113c79b6af0b6551e77e5c2c54c19fc01
 var dimpleChart = false;
 var dimpleChartz, medalsAxis;
-
 
 function drawDimplePlot(data) {
   var svg = dimple.newSvg("#dimpleContainer", 590, 400);
@@ -61,14 +65,9 @@ function drawDimplePlot(data) {
 
 function filterMedals(event) {
     medalsAxis.measure = event.target.value;
-    dimpleChartz.draw();
+    dimpleChartz.draw(750);
 }
 
-
-function resetFilter(){
-   dimpleChartz.data = dimple.filterData(loadedData,"Damage index", null);
-   dimpleChartz.draw();
-}
 
 var damaged_csv = "https://dl.dropbox.com/s/8xcfjb8m2dvtnpn/olympicstats%20-%20Blad1%20%281%29.csv?dl=0";
 var data2_csv = "https://dl.dropbox.com/s/e0rxtxdsa2nhfui/medals.csv?dl=0";
@@ -79,11 +78,26 @@ d3.csv(damaged_csv, function (data) {
 });
 
 d3.csv(data2_csv, function (data) {
-    loadedData = data;
-    drawDimplePlotZWEI(data);
+    areaChartData = data;
+    drawDimplePlotZWEI(areaChartData);
 
 });
 
+<<<<<<< HEAD
+=======
+function zoom() {
+    totalAxis.overrideMin = 400;
+    totalAxis.overrideMax = 900;
+    otherDimple.draw(1000);
+}
+
+function resetZoom() {
+    totalAxis.overrideMin = null;
+    totalAxis.overrideMax = null;
+    otherDimple.draw(1000);
+}
+
+>>>>>>> 3555b82113c79b6af0b6551e77e5c2c54c19fc01
 function dimpleZoomReset() {
     dimpleChart.axes[0].overrideMin = 52;
     dimpleChart.axes[0].overrideMax = 75;
