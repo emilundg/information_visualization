@@ -12,7 +12,7 @@ body {
 }
 
 .box {
-    background-color: rgb(166, 196, 255);
+    background-color: white;
     border-radius: 5px;
     padding: 10px;
     BOX-SHADOW: 4PX 4PX 20PX rgb(24, 24, 24);
