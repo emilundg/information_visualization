@@ -139,10 +139,9 @@ function drawDimplePlot(data) {
   var svg = dimple.newSvg("#dimpleContainer", 590, 400);
   dimpleChartz = new dimple.chart(svg, data);
   dimpleChartz.setBounds(20, 20, 300, 360)
-  dimpleChartz.addMeasureAxis("p", "Golds");
-  dimpleChartz.addMeasureAxis("p", "Silvers");
-  //  = dimpleChartz.addMeasureAxis("p", "Silvers");
-  var innerRing = dimpleChartz.addSeries("Country", dimple.plot.pie);
+  dimpleChartz.addMeasureAxis("p", "Total");
+  var innerRing = dimpleChartz.addSeries(["Golds", "Silvers", "Bronzes", "Country"], dimple.plot.pie);
+
   // Negatives are calculated from outside edge, positives from center
   innerRing.outerRadius = "0px";
   innerRing.innerRadius = "-50px";
