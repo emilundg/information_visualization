@@ -139,8 +139,10 @@ function drawDimplePlot(data) {
   var svg = dimple.newSvg("#dimpleContainer", 590, 400);
   dimpleChartz = new dimple.chart(svg, data);
   dimpleChartz.setBounds(20, 20, 300, 360)
-  dimpleChartz.addMeasureAxis("p", "Damage index");
-  var innerRing = dimpleChartz.addSeries("Flight", dimple.plot.pie);
+  dimpleChartz.addMeasureAxis("p", "Golds");
+  dimpleChartz.addMeasureAxis("p", "Silvers");
+  //  = dimpleChartz.addMeasureAxis("p", "Silvers");
+  var innerRing = dimpleChartz.addSeries("Country", dimple.plot.pie);
   // Negatives are calculated from outside edge, positives from center
   innerRing.outerRadius = "0px";
   innerRing.innerRadius = "-50px";
@@ -159,14 +161,9 @@ function resetFilter(){
    dimpleChartz.draw();
 }
 
-var damaged_csv = "https://dl.dropbox.com/s/r7efnr66iwvfqlu/olympicsshiet1.csv?dl=0";
+var damaged_csv = "https://dl.dropbox.com/s/8xcfjb8m2dvtnpn/olympicstats%20-%20Blad1%20%281%29.csv?dl=0";
 
 d3.csv(damaged_csv, function (data) {
-    data.forEach(function (d) {
-        d["Erosion Incidents"] = +d["Erosion Incidents"];
-        d["Temperature"] = +d["Temperature"];
-        d["Shuttle"] = "Challenger";
-    });
     loadedData = data;
 
     d3Update = drawD3Plot(data);
