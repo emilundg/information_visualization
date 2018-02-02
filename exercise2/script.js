@@ -133,13 +133,13 @@ function d3ResetZoom() {
 }
 
 var dimpleChart = false;
-var dimpleChartz;
+var dimpleChartz, medalsAxis;
 
 function drawDimplePlot(data) {
   var svg = dimple.newSvg("#dimpleContainer", 590, 400);
   dimpleChartz = new dimple.chart(svg, data);
   dimpleChartz.setBounds(20, 20, 300, 360)
-  dimpleChartz.addMeasureAxis("p", "Total");
+  medalsAxis = dimpleChartz.addMeasureAxis("p", "Total");
   var innerRing = dimpleChartz.addSeries(["Golds", "Silvers", "Bronzes", "Country"], dimple.plot.pie);
 
   // Negatives are calculated from outside edge, positives from center
@@ -149,8 +149,8 @@ function drawDimplePlot(data) {
   dimpleChartz.draw();
 }
 
-function filterDamage() {
-    dimpleChartz.data = dimple.filterData(loadedData,"Damage index",["2", "4", "11"]);
+function filterMedals(event) {
+    medalsAxis.measure = event.target.value;
     dimpleChartz.draw();
 }
 
@@ -190,3 +190,5 @@ function dimpleZoomRight() {
     dimpleChart.axes[1].overrideMax -= 1;
     dimpleChart.draw(750);
 }
+
+document.querySelector("#medals-filter").addEventListener('change', filterMedals);

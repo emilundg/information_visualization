@@ -13,8 +13,13 @@
     </div>
     <div class="box"><h2>Top ten medalist countries</h2>
         <div id="dimpleContainer"></div>
-        <button id="buttonz" onclick="filterDamage()">Filter Damages Only</button>
-        <button id="buttonz" onclick="resetFilter()">Reset Filter</button>
+        <label for="medals-filter">Filter by medal type:</label>
+        <select name="" id="medals-filter">
+            <option value="Total">Total</option>
+            <option value="Golds">Golds</option>
+            <option value="Silvers">Silvers</option>
+            <option value="Bronzes">Bronzes</option>
+        </select>
     </div>
     <div class="box">
         <h2>Countries medals per year</h2>
