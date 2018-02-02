@@ -13,8 +13,10 @@ function drawDimplePlotZWEI(data) {
        otherDimple.setBounds(60, 30, 505, 305);
        var yearAxis = otherDimple.addCategoryAxis("x", "edition");
        yearAxis.addOrderRule("Date");
+       yearAxis.title = "Year";
        totalAxis = otherDimple.addMeasureAxis("y", "total");
        totalAxis.tickFormat = "";
+       totalAxis.title = "Total";
        var lol = otherDimple.addSeries("noc", dimple.plot.area);
        var legend = otherDimple.addLegend(60, 10, 500, 20, "right");
        lol.lineWeight = 0;
