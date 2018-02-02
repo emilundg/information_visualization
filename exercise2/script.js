@@ -116,22 +116,6 @@ function drawD3Plot() {
     return update;
 }
 
-function d3RandomizeData() {
-    var randomIndex = Math.floor(Math.random() * loadedData.length);
-    loadedData[randomIndex]["Erosion incidents"] = Math.random() * 5;
-    loadedData[randomIndex]["Temperature F"] = 50 + Math.random() * 35;
-    if (randomIndex < 4) {
-        loadedData.push(loadedData[randomIndex]);
-    }
-    if (randomIndex > 6) {
-        loadedData.splice(randomIndex, 1);
-    }
-
-    if (d3Update) {
-        d3Update();
-    }
-}
-
 function d3RandomZoom() {
     if (d3Update) {
         domainX = [Math.random() * 70, 85];
@@ -149,35 +133,30 @@ function d3ResetZoom() {
 }
 
 var dimpleChart = false;
+var dimpleChartz;
 
 function drawDimplePlot(data) {
   var svg = dimple.newSvg("#dimpleContainer", 590, 400);
-  var dimpleChart = new dimple.chart(svg, data);
-  dimpleChart.setBounds(20, 20, 300, 360)
-  dimpleChart.addMeasureAxis("p", "Damage index");
-  var innerRing = dimpleChart.addSeries("Flight", dimple.plot.pie);
+  dimpleChartz = new dimple.chart(svg, data);
+  dimpleChartz.setBounds(20, 20, 300, 360)
+  dimpleChartz.addMeasureAxis("p", "Damage index");
+  var innerRing = dimpleChartz.addSeries("Flight", dimple.plot.pie);
   // Negatives are calculated from outside edge, positives from center
   innerRing.outerRadius = "-26px";
   innerRing.innerRadius = "-50px";
-  dimpleChart.addLegend(300, 20, 90, 300, "right");
-  dimpleChart.draw();
+  dimpleChartz.addLegend(300, 20, 90, 300, "right");
+  dimpleChartz.draw();
 }
 
-function drawDimplePlot2(data) {
+function filterDamage() {
+    dimpleChartz.data = dimple.filterData(loadedData,"Damage index",["2", "4", "11"]);
+    dimpleChartz.draw();
+}
 
-  var svg = dimple.newSvg("#dimpleContainer2", 590, 400);
-  var dimpleChart = new dimple.chart(svg, data);
-  dimpleChart.setBounds(65, 30, 505, 305);
-  var x = dimpleChart.addCategoryAxis("x", "Date");
-  x.addOrderRule("Date");
-  var y = dimpleChart.addMeasureAxis("y", "Temperature F");
-  dimpleChart.addSeries(null, dimple.plot.area);
-  dimpleChart.addLegend("2%", 10, "96%", 30, "right");
-  dimpleChart.defaultColors = [
-  	new dimple.color("#FF0000", "Blue"), // Set a red fill with a blue stroke
-  ];
-  dimpleChart.draw();
 
+function resetFilter(){
+   dimpleChartz.data = dimple.filterData(loadedData,"Damage index", null);
+   dimpleChartz.draw();
 }
 
 var damaged_csv = "https://dl.dropbox.com/s/7koek9msjpybdgq/infovisdata.csv?dl=0";
@@ -193,6 +172,4 @@ d3.csv(damaged_csv, function (data) {
     d3Update = drawD3Plot(data);
 
     drawDimplePlot(data);
-
-    drawDimplePlot2(data);
 });
