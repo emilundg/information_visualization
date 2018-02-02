@@ -196,3 +196,24 @@ d3.csv(damaged_csv, function (data) {
 
     drawDimplePlot2(data);
 });
+
+function dimpleZoomReset() {
+    dimpleChart.axes[0].overrideMin = 52;
+    dimpleChart.axes[0].overrideMax = 75;
+    dimpleChart.axes[1].overrideMin = 0;
+    dimpleChart.axes[1].overrideMax = 8;
+    dimpleChart.draw(1000);
+}
+
+function dimpleZoomLeft() {
+    dimpleChart.axes[0].overrideMax -= 4;
+    dimpleChart.axes[1].overrideMax -= 1;
+    dimpleChart.draw(750);
+}
+
+
+function dimpleZoomRight() {
+    dimpleChart.axes[0].overrideMin += 4;
+    dimpleChart.axes[1].overrideMax -= 1;
+    dimpleChart.draw(750);
+}
