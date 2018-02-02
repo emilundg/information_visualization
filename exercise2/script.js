@@ -34,10 +34,6 @@ function drawDimplePlotZWEI(data) {
        otherDimple.draw();
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 3555b82113c79b6af0b6551e77e5c2c54c19fc01
 var dimpleChart = false;
 var dimpleChartz, medalsAxis;
 
@@ -85,8 +81,6 @@ d3.csv(data2_csv, function (data) {
 
 });
 
-<<<<<<< HEAD
-=======
 function zoom() {
     totalAxis.overrideMin = 400;
     totalAxis.overrideMax = 900;
@@ -99,7 +93,6 @@ function resetZoom() {
     otherDimple.draw(1000);
 }
 
->>>>>>> 3555b82113c79b6af0b6551e77e5c2c54c19fc01
 function dimpleZoomReset() {
     dimpleChart.axes[0].overrideMin = 52;
     dimpleChart.axes[0].overrideMax = 75;
