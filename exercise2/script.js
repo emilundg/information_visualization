@@ -14,7 +14,7 @@ function drawDimplePlotZWEI(data) {
        x.addOrderRule("Date");
        otherDimple.addMeasureAxis("y", "total");
        var lol = otherDimple.addSeries("noc", dimple.plot.area);
-       otherDimple.addLegend(60, 10, 500, 20, "right");
+       var legend = otherDimple.addLegend(60, 10, 500, 20, "right");
        lol.lineWeight = 0;
        otherDimple.assignColor("USA", "#a6cee3");
        otherDimple.assignColor("URS", "#1f78b4");
@@ -29,15 +29,6 @@ function drawDimplePlotZWEI(data) {
 
        otherDimple.draw();
 }
-
-
-
-
-
-
-
-
-
 
 
 var dimpleChart = false;
@@ -92,10 +83,6 @@ d3.csv(data2_csv, function (data) {
     drawDimplePlotZWEI(data);
 
 });
-
-function d3Filter() {
-    dimpleChart.data = dimple.filterData(loadedData,"total",["400"]);
-}
 
 function dimpleZoomReset() {
     dimpleChart.axes[0].overrideMin = 52;
